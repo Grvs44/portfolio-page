@@ -6,6 +6,7 @@ export type TopContent = {
   name: string
   socials?: Social[]
   description?: string
+  about: string
 }
 
 export type Content = TopContent
