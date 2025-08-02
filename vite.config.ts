@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react'
 import license from 'rollup-plugin-license'
-import { defineConfig } from 'vite'
-import type { Plugin } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import jsconfigPaths from 'vite-jsconfig-paths'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -23,6 +22,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+          c: ['src/content'],
           e: ['@emotion/react', '@emotion/styled'],
           m: ['@mui/material'],
           r: ['react', 'react-dom'],
