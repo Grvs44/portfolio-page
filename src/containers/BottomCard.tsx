@@ -6,20 +6,28 @@ import SocialStack from '../components/SocialStack'
 import StyledCard from '../components/StyledCard'
 import type { TopCardProps } from './TopCard'
 
-const StyledLink = styled(Link)(({ theme }) => ({
+const RepoText = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
   textDecorationColor: theme.palette.primary.contrastText,
+  textAlign: 'center',
 }))
 
 const BottomCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
     <Typography>{content.name}</Typography>
     <SocialStack socials={content.socials} />
-    Created with{' '}
-    <StyledLink target="_blank" href="https://github.com/Grvs44/mypage">
-      mypage
-    </StyledLink>{' '}
-    {import.meta.env.VITE_VERSION}
+    <RepoText>
+      Created with{' '}
+      <Link
+        rel="noopener"
+        sx={{ color: 'inherit', textDecorationColor: 'inherit' }}
+        target="_blank"
+        href="https://github.com/Grvs44/mypage"
+      >
+        mypage
+      </Link>{' '}
+      {import.meta.env.VITE_VERSION}
+    </RepoText>
   </StyledCard>
 )
 
