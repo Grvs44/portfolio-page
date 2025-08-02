@@ -1,4 +1,6 @@
 import type { FC } from 'react'
+import Avatar from '@mui/material/Avatar'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import SocialStack from '../components/SocialStack'
 import StyledCard from '../components/StyledCard'
@@ -10,15 +12,26 @@ export type TopCardProps = {
 
 const TopCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
-    <Typography component="h1" variant="h2">
-      {content.name}
-    </Typography>
-    <SocialStack socials={content?.socials} />
-    {content.description ? (
-      <Typography sx={{ whiteSpace: 'pre-wrap' }}>
-        {content.description}
-      </Typography>
-    ) : null}
+    <Grid container>
+      <Grid size={4} display="flex" justifyContent="center" alignItems="center">
+        <Avatar
+          src={content.photo}
+          sx={{ height: 150, width: 150 }}
+          title="Profile photo"
+        />
+      </Grid>
+      <Grid size="grow">
+        <Typography component="h1" variant="h2">
+          {content.name}
+        </Typography>
+        <SocialStack socials={content?.socials} />
+        {content.description ? (
+          <Typography sx={{ whiteSpace: 'pre-wrap' }}>
+            {content.description}
+          </Typography>
+        ) : null}
+      </Grid>
+    </Grid>
   </StyledCard>
 )
 
