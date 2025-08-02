@@ -10,11 +10,11 @@ export type SocialStackProps = {
 const SocialStack: FC<SocialStackProps> = (props) =>
   props.socials ? (
     <Stack direction="row">
-      {props.socials.map((social) =>
+      {props.socials.map((social, index) =>
         typeof social == 'string' ? (
-          <SocialIcon target="_blank" url={social} />
+          <SocialIcon key={index} target="_blank" url={social} />
         ) : (
-          <SocialIcon target="_blank" {...social} />
+          <SocialIcon key={index} target="_blank" {...social} />
         ),
       )}
     </Stack>
