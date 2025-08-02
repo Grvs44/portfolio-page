@@ -1,7 +1,7 @@
 import type { FC } from 'react'
-import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import SocialStack from '../components/SocialStack'
+import StyledCard from '../components/StyledCard'
 import type { TopContent } from '../types'
 
 export type TopCardProps = {
@@ -9,7 +9,7 @@ export type TopCardProps = {
 }
 
 const TopCard: FC<TopCardProps> = ({ content }) => (
-  <Card>
+  <StyledCard>
     <Typography component="h1" variant="h2">
       {content.name}
     </Typography>
@@ -19,7 +19,7 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
         {content.description}
       </Typography>
     ) : null}
-  </Card>
+  </StyledCard>
 )
 
 export default TopCard
