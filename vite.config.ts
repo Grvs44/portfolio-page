@@ -26,6 +26,7 @@ export default defineConfig({
           e: ['@emotion/react', '@emotion/styled'],
           m: ['@mui/material'],
           r: ['react', 'react-dom'],
+          s: ['react-social-icons'],
         },
       },
       plugins: [
