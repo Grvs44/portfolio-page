@@ -1,9 +1,13 @@
 {
   "description": "Welcome to my page!\nDescription goes here",
-  "about":"This is a short paragraph about me.",
-  "photo":"img.png",
+  "about": "This is a short paragraph about me.",
+  "photo": "img.png",
   "socials": [
     "https://github.com/Grvs44",
     "https://bsky.app/profile/grvs44.bsky.social"
+  ],
+  "projects": [
+    { "name": "Project 1", "photo": "img.png", "text": "This is my project" },
+    { "name": "Project 2", "text": "This project does not have an image" }
   ]
 }

@@ -4,10 +4,18 @@ export type Social = string | SocialIconProps
 
 export type TopContent = {
   name: string
-  photo?:string
+  photo?: string
   socials?: Social[]
   description?: string
-  about: string
 }
 
-export type Content = TopContent
+export type Project = {
+  name: string
+  photo?: string
+  text: string
+}
+
+export type Content = TopContent & {
+  about: string
+  projects?: Project[]
+}
