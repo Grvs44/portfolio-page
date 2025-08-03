@@ -6,7 +6,9 @@
     "url": "https://github.com/Grvs44"
   },
   "license": "BSD-3-Clause",
-  "repository": "https://github.com/Grvs44/mypage",
+  "repository": {
+    "url": "https://github.com/Grvs44/mypage"
+  },
   "private": true,
   "type": "module",
   "scripts": {
