@@ -6,7 +6,7 @@ export default async function run() {
     content[key] = content[key].trim()
   }
   await writeFile('./src/content/content.json', JSON.stringify(content))
-  await writeFile('./.env.local', 'VITE_NAME=' + content.name)
+  await writeFile('./.env', 'VITE_NAME=' + content.name)
 }
 
 run()
