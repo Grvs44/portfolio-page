@@ -3,6 +3,7 @@ node_modules
 .pnp.js
 coverage
 build
+./src/content/content.json
 
 .DS_Store
 .env.local
