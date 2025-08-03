@@ -15,7 +15,13 @@ export type Project = {
   text: string
 }
 
+export type Skill = {
+  name: string
+  text: string
+}
+
 export type Content = TopContent & {
   about: string
   projects?: Project[]
+  skills?: Skill[]
 }
