@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectsPaper: FC<{ projects?: Project[] }> = ({ projects }) =>
   projects ? (
-    <Paper>
+    <Paper sx={{ padding: 2 }}>
       <Typography component="h2" variant="h3">
         Projects
       </Typography>
