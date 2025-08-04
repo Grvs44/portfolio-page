@@ -1,5 +1,6 @@
 export default {
-  name: 'mypage',
+  name: 'Grvs44',
+  pronouns: 'she/her',
   description: `
 Welcome to my page!
 Description goes here
