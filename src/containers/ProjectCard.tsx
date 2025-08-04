@@ -8,10 +8,10 @@ import type { Project } from '../types'
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => (
   <Card>
-    <Grid container>
+    <Grid container spacing={2}>
       {project.photo ? (
         <Grid
-          size={2}
+          size={{ xs: 12, sm: 3, md: 2 }}
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -23,7 +23,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => (
           />
         </Grid>
       ) : null}
-      <Grid size="grow">
+      <Grid size={{ xs: 12, sm: 'grow' }}>
         <Typography component="h3" variant="h4">
           {project.name}
         </Typography>
