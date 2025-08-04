@@ -15,11 +15,9 @@ export default defineConfig({
     react(),
     jsconfigPaths(),
     VitePWA({
-      injectRegister: 'inline',
       manifest: {
         short_name: env.VITE_NAME,
         name: env.VITE_NAME,
-        id: '/',
         icons: [
           {
             src: 'img.png',
@@ -33,7 +31,6 @@ export default defineConfig({
         theme_color: '#1976d2',
         background_color: '#ffffff',
       },
-      workbox: { clientsClaim: true, skipWaiting: true },
     }),
     createHtmlPlugin({ minify: true }),
   ],

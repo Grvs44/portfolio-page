@@ -3,9 +3,11 @@ node_modules
 .pnp.js
 coverage
 build
+dev-dist
 src/content/content.json
 
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
