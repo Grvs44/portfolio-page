@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import SocialStack from '../components/SocialStack'
 import StyledCard from '../components/StyledCard'
+import Text from '../components/Text'
 import type { TopContent } from '../types'
 
 export type TopCardProps = {
@@ -29,11 +30,7 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
         <Typography component="h1" variant="h2">
           {content.name}
         </Typography>
-        {content.description ? (
-          <Typography sx={{ whiteSpace: 'pre-wrap' }}>
-            {content.description}
-          </Typography>
-        ) : null}
+        {content.description ? <Text>{content.description}</Text> : null}
         <SocialStack socials={content?.socials} />
       </Grid>
     </Grid>
