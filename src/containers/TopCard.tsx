@@ -30,6 +30,9 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
         <Typography component="h1" variant="h2">
           {content.name}
         </Typography>
+        <Typography variant="h6" sx={{ fontStyle: 'italic' }}>
+          {content.pronouns}
+        </Typography>
         {content.description ? <Text>{content.description}</Text> : null}
         <SocialStack socials={content?.socials} />
       </Grid>

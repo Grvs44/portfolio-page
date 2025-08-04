@@ -4,6 +4,7 @@ export type Social = string | SocialIconProps
 
 export type TopContent = {
   name: string
+  pronouns?: string
   photo?: string
   socials?: Social[]
   description?: string
