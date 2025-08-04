@@ -1,15 +1,14 @@
 import type { FC } from 'react'
 import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import AboutCard from './containers/AboutCard'
 import BottomCard from './containers/BottomCard'
 import ProjectsPaper from './containers/ProjectsPaper'
 import SkillsCard from './containers/SkillsCard'
 import TopCard from './containers/TopCard'
-import content from './content/content'
+import type { Content } from './types'
 
-const App: FC = () => (
+const App: FC<{ content: Content }> = ({ content }) => (
   <Box>
     <TopCard content={content} />
     <Grid container spacing={2} sx={{ padding: 2 }}>

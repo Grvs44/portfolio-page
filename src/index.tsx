@@ -1,3 +1,5 @@
+import type { Content } from './types'
+
 const viewLicenses = () =>
   fetch('./licenses.txt')
     .then(async (response) => {
@@ -11,11 +13,12 @@ const createApp = async () => {
   const { createRoot } = await import('react-dom/client')
   const App = (await import('./App')).default
   const theme = (await import('./theme')).default
+  const content: Content = (await import('./content/content')).default
 
   createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <App content={content} />
     </ThemeProvider>,
   )
 }
