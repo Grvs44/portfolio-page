@@ -18,7 +18,7 @@ const InheritLink = styled(Link)({
 })
 
 const BottomCard: FC<TopCardProps> = ({ content }) => (
-  <StyledCard>
+  <StyledCard sx={{ padding: 2 }}>
     <Typography>{content.name}</Typography>
     <SocialStack socials={content.socials} />
     <RepoText>

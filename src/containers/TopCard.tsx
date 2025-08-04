@@ -26,7 +26,7 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
           title="Profile photo"
         />
       </Grid>
-      <Grid size={{ xs: 21, sm: 'grow' }} sx={{ padding: { xs: 2, sm: 0 } }}>
+      <Grid size={{ xs: 21, sm: 'grow' }} sx={{ padding: 2 }}>
         <Typography component="h1" variant="h2">
           {content.name}
         </Typography>
