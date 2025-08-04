@@ -1,7 +1,7 @@
 import { styled } from '@mui/material'
-import Card from '@mui/material/Card'
+import DisplayCard from './DisplayCard'
 
-export default styled(Card)(({ theme }) => ({
+export default styled(DisplayCard)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
 }))

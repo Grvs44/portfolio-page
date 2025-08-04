@@ -4,6 +4,7 @@ node_modules
 coverage
 build
 dev-dist
+public/*.png
 src/content/content.json
 
 .DS_Store

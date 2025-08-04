@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
+import DisplayCard from '../components/DisplayCard'
 import Text from '../components/Text'
 
 export type AboutCardProps = {
@@ -8,12 +8,12 @@ export type AboutCardProps = {
 }
 
 const AboutCard: FC<AboutCardProps> = (props) => (
-  <Card>
+  <DisplayCard>
     <Typography component="h2" variant="h3">
       About me
     </Typography>
     <Text>{props.text}</Text>
-  </Card>
+  </DisplayCard>
 )
 
 export default AboutCard
