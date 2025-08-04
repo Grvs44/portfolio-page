@@ -1,12 +1,12 @@
 import type { FC } from 'react'
-import Card from '@mui/material/Card'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import DisplayCard from '../components/DisplayCard'
 import type { Skill } from '../types'
 
 const SkillsCard: FC<{ skills?: Skill[] }> = ({ skills }) =>
   skills ? (
-    <Card>
+    <DisplayCard>
       <Typography component="h2" variant="h3">
         Skills
       </Typography>
@@ -17,7 +17,7 @@ const SkillsCard: FC<{ skills?: Skill[] }> = ({ skills }) =>
           </Grid>
         ))}
       </Grid>
-    </Card>
+    </DisplayCard>
   ) : null
 
 export default SkillsCard
