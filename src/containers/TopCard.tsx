@@ -13,23 +13,28 @@ export type TopCardProps = {
 const TopCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
     <Grid container>
-      <Grid size={4} display="flex" justifyContent="center" alignItems="center">
+      <Grid
+        size={{ xs: 12, sm: 4 }}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Avatar
           src={content.photo}
           sx={{ height: 150, width: 150 }}
           title="Profile photo"
         />
       </Grid>
-      <Grid size="grow">
+      <Grid size={{ xs: 21, sm: 'grow' }} sx={{ padding: { xs: 2, sm: 0 } }}>
         <Typography component="h1" variant="h2">
           {content.name}
         </Typography>
-        <SocialStack socials={content?.socials} />
         {content.description ? (
           <Typography sx={{ whiteSpace: 'pre-wrap' }}>
             {content.description}
           </Typography>
         ) : null}
+        <SocialStack socials={content?.socials} />
       </Grid>
     </Grid>
   </StyledCard>
