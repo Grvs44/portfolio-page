@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import { Typography } from '@mui/material'
 import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
 import type { Project } from '../types'
 import ProjectCard from './ProjectCard'
 
