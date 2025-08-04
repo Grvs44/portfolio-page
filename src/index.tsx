@@ -1,7 +1,9 @@
-const viewLicenses = async () => {
-  const response = await fetch('./licenses.txt')
-  document.body.innerText = await response.text()
-}
+const viewLicenses = () =>
+  fetch('./licenses.txt')
+    .then(async (response) => {
+      document.body.innerText = await response.text()
+    })
+    .catch((reason) => (document.body.innerText = 'Error: ' + reason))
 
 const createApp = async () => {
   const CssBaseline = (await import('@mui/material/CssBaseline')).default
