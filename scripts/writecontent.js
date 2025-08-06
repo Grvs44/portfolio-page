@@ -1,9 +1,9 @@
 // @ts-check
 import { writeFile } from 'node:fs/promises'
-import pkg from './package.json' with { type: 'json' }
+import pkg from '../package.json' with { type: 'json' }
 
 export default async function run() {
-  const content = (await import('./content.js')).default
+  const content = (await import('../content.js')).default
   if (!('name' in content)) throw 'name missing from content'
 
   for (const key of ['name', 'description', 'about']) {
