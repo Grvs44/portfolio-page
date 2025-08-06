@@ -1,5 +1,5 @@
 {
-  "name": "mypage",
+  "name": "portfolio-page",
   "version": "0.1.0",
   "author": {
     "name": "Elli Greaves",
@@ -7,7 +7,7 @@
   },
   "license": "BSD-3-Clause",
   "repository": {
-    "url": "https://github.com/Grvs44/mypage"
+    "url": "https://github.com/Grvs44/portfolio-page"
   },
   "private": true,
   "type": "module",

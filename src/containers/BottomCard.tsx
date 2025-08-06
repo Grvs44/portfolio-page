@@ -26,9 +26,9 @@ const BottomCard: FC<TopCardProps> = ({ content }) => (
       <InheritLink
         rel="noopener"
         target="_blank"
-        href="https://github.com/Grvs44/mypage"
+        href="https://github.com/Grvs44/portfolio-page"
       >
-        mypage
+        Portfolio Page
       </InheritLink>
       {' v'}
       {import.meta.env.VITE_VERSION} (
