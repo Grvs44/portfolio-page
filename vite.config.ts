@@ -27,7 +27,6 @@ export default defineConfig({
         ],
         start_url: '.',
         scope: '.',
-        display_override: ['window-controls-overlay', 'standalone'],
         theme_color: env.COLOR || '#1976d2',
       },
     }),
