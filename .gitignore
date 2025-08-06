@@ -5,7 +5,7 @@ coverage
 build
 dev-dist
 public/*.png
-src/content/content.json
+src/content.ts
 
 .DS_Store
 .env

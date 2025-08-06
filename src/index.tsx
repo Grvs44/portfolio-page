@@ -13,7 +13,7 @@ const createApp = async () => {
   const { createRoot } = await import('react-dom/client')
   const App = (await import('./App')).default
   const getTheme = (await import('./theme')).default
-  const content: Content = (await import('./content/content')).default
+  const content: Content = (await import('./content')).default
 
   createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={getTheme(content.color)}>
