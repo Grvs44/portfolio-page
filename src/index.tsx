@@ -12,11 +12,11 @@ const createApp = async () => {
   const { ThemeProvider } = await import('@mui/material/styles')
   const { createRoot } = await import('react-dom/client')
   const App = (await import('./App')).default
-  const theme = (await import('./theme')).default
+  const getTheme = (await import('./theme')).default
   const content: Content = (await import('./content/content')).default
 
   createRoot(document.getElementById('root')!).render(
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={getTheme(content.color)}>
       <CssBaseline />
       <App content={content} />
     </ThemeProvider>,

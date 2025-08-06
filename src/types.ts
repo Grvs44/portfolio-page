@@ -22,6 +22,7 @@ export type Skill = {
 }
 
 export type Content = TopContent & {
+  color?: string
   about: string
   projects?: Project[]
   skills?: Skill[]
