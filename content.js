@@ -1,4 +1,5 @@
 export default {
+  color: '#ff00b8',
   name: 'Grvs44',
   pronouns: 'she/her',
   description: `
