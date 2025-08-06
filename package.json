@@ -13,6 +13,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
+    "content": "node ./scripts/writecontent.js",
     "build": "tsc && vite build"
   },
   "browserslist": {
