@@ -9,7 +9,10 @@ export default async function run() {
   for (const key of ['name', 'description', 'about']) {
     content[key] = content[key].trim()
   }
-  await writeFile('./src/content/content.json', JSON.stringify(content))
+  await writeFile(
+    './src/content.ts',
+    'export default ' + JSON.stringify(content),
+  )
 
   const vars = ['VITE_NAME=' + content.name, 'VITE_VERSION=' + pkg.version]
   if (content.color) vars.push(`COLOR="${content.color}"`)
