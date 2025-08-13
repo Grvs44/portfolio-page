@@ -12,30 +12,25 @@ const RepoText = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
 }))
 
-const InheritLink = styled(Link)({
-  color: 'inherit',
-  textDecorationColor: 'inherit',
-})
-
 const BottomCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
     <Typography>{content.name}</Typography>
     <SocialStack socials={content.socials} />
     <RepoText>
       Created with{' '}
-      <InheritLink
+      <Link
         rel="noopener"
         target="_blank"
         href="https://github.com/Grvs44/portfolio-page"
+        sx={{
+          color: 'inherit',
+          textDecorationColor: 'inherit',
+        }}
       >
         Portfolio Page
-      </InheritLink>
+      </Link>
       {' v'}
-      {import.meta.env.VITE_VERSION} (
-      <InheritLink target="_blank" href="./licenses.txt">
-        view licenses
-      </InheritLink>
-      )
+      {import.meta.env.VITE_VERSION}
     </RepoText>
   </StyledCard>
 )
