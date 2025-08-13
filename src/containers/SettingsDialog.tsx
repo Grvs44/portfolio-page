@@ -6,6 +6,7 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 import Divider from '@mui/material/Divider'
 import CloseButton from '../components/CloseButton'
+import LicenseBox from '../components/LicenseBox'
 import SetThemeBox from '../components/SetThemeBox'
 
 export type SettingsDialogProps = {
@@ -20,6 +21,7 @@ const SettingsDialog: FC<SettingsDialogProps> = (props) => (
     <DialogContent>
       <SetThemeBox />
       <Divider />
+      <LicenseBox />
     </DialogContent>
     <DialogActions>
       <Button type="button" onClick={props.onClose}>
