@@ -11,12 +11,10 @@ const LicenseBox: FC = () => {
         <textarea
           readOnly
           value={state.licenses}
-          style={{ height: 200, width: '100%' }}
+          style={{ height: 200, width: '100%', marginTop: '1em' }}
         ></textarea>
       ) : (
-        <Button onClick={state.getLicenses}>
-          View licenses
-        </Button>
+        <Button onClick={state.getLicenses}>View licenses</Button>
       )}
     </Box>
   )
