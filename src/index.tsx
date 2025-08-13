@@ -1,3 +1,4 @@
+import StateProvider from './context/StateProvider'
 import type { Content } from './types'
 
 const viewLicenses = () =>
@@ -18,7 +19,9 @@ const createApp = async () => {
   createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={getTheme(content.color)}>
       <CssBaseline />
-      <App content={content} />
+      <StateProvider>
+        <App content={content} />
+      </StateProvider>
     </ThemeProvider>,
   )
 }
