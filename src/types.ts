@@ -14,6 +14,12 @@ export type Project = {
   name: string
   photo?: string
   text: string
+  links?: Link[]
+}
+
+export type Link = {
+  text: string
+  url: string
 }
 
 export type Skill = {
