@@ -10,7 +10,7 @@ import type { Content } from './types'
   const content: Content = (await import('./content')).default
 
   createRoot(document.getElementById('root')!).render(
-    <ThemeProvider theme={getTheme(content.color)}>
+    <ThemeProvider theme={getTheme(content.color)} noSsr>
       <CssBaseline />
       <StateProvider>
         <App content={content} />
