@@ -13,8 +13,9 @@ const SetThemeBox: FC = () => {
   return mode ? (
     <Box>
       <FormControl>
-        <FormLabel>Theme</FormLabel>
+        <FormLabel id="theme">Theme</FormLabel>
         <RadioGroup
+          aria-labelledby="theme"
           name="theme-toggle"
           row
           value={mode}
