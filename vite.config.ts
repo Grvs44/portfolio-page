@@ -39,8 +39,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           e: ['@emotion/react', '@emotion/styled'],
+          i: ['@mui/icons-material'],
           m: ['@mui/material'],
-          r: ['react', 'react-dom'],
           s: ['react-social-icons'],
         },
       },
