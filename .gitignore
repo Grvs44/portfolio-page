@@ -4,6 +4,7 @@ node_modules
 coverage
 build
 dev-dist
+public/licenses.txt
 public/*.png
 src/content.ts
 
