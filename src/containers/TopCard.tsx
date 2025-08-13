@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import SettingsButton from '../components/SettingsButton'
 import SocialStack from '../components/SocialStack'
 import StyledCard from '../components/StyledCard'
 import Text from '../components/Text'
@@ -13,6 +14,7 @@ export type TopCardProps = {
 
 const TopCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
+    <SettingsButton />
     <Grid container>
       <Grid
         size={{ xs: 12, sm: 4 }}
