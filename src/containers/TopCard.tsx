@@ -1,8 +1,11 @@
 import type { FC } from 'react'
 import Avatar from '@mui/material/Avatar'
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import CopyButton from '../components/CopyButton'
 import SettingsButton from '../components/SettingsButton'
+import ShareButton from '../components/ShareButton'
 import SocialStack from '../components/SocialStack'
 import StyledCard from '../components/StyledCard'
 import Text from '../components/Text'
@@ -36,6 +39,10 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
           {content.pronouns}
         </Typography>
         {content.description ? <Text>{content.description}</Text> : null}
+        <Box>
+          <ShareButton />
+          <CopyButton />
+        </Box>
         <SocialStack socials={content?.socials} />
       </Grid>
     </Grid>
