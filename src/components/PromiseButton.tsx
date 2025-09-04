@@ -19,18 +19,22 @@ const Button = styled(IconButton)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
 }))
 
-const PromiseButton: FC<PromiseButtonProps> = (props) => {
+const PromiseButton: FC<PromiseButtonProps> = ({
+  getPromise,
+  title: initialTitle,
+  children,
+  ...props
+}) => {
   const [state, setState] = useState<State>(State.Ready)
-  const [title, setTitle] = useState<string>(props.title)
+  const [title, setTitle] = useState<string>(initialTitle)
 
   const reset = () => {
     setState(State.Ready)
-    setTitle(props.title)
+    setTitle(initialTitle)
   }
 
   const share = () => {
-    props
-      .getPromise()
+    getPromise()
       .then(() => setState(State.Success))
       .catch(() => setState(State.Fail))
   }
@@ -49,9 +53,9 @@ const PromiseButton: FC<PromiseButtonProps> = (props) => {
   }, [state])
 
   return (
-    <Button {...props} aria-label={title} onClick={share}>
+    <Button {...props} aria-label={title} title={title} onClick={share}>
       {state == State.Ready ? (
-        props.children
+        children
       ) : state == State.Success ? (
         <DoneIcon />
       ) : (
