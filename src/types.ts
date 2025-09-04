@@ -22,14 +22,9 @@ export type Link = {
   url: string
 }
 
-export type Skill = {
-  name: string
-  text: string
-}
-
 export type Content = TopContent & {
   color?: string
   about: string
   projects?: Project[]
-  skills?: Skill[]
+  skills?: string[]
 }
