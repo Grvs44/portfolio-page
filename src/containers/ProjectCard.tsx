@@ -18,7 +18,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => (
         >
           <img
             src={project.photo}
-            style={{ maxHeight: '100%', maxWidth: '100%' }}
+            style={{ borderRadius: 8, maxHeight: '100%', maxWidth: '100%' }}
             title={project.name}
           />
         </Grid>
