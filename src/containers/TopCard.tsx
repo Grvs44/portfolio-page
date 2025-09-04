@@ -27,7 +27,7 @@ const TopCard: FC<TopCardProps> = ({ content }) => (
       >
         <Avatar
           src={content.photo}
-          sx={{ height: 150, width: 150 }}
+          sx={{ height: 200, width: 200 }}
           title="Profile photo"
         />
       </Grid>
