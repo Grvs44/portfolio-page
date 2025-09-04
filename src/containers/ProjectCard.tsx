@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import DisplayCard from '../components/DisplayCard'
@@ -17,9 +16,9 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => (
           justifyContent="center"
           alignItems="center"
         >
-          <Avatar
+          <img
             src={project.photo}
-            sx={{ height: 100, width: 100 }}
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
             title={project.name}
           />
         </Grid>
