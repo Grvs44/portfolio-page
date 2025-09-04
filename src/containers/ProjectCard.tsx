@@ -11,7 +11,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => (
     <Grid container spacing={2}>
       {project.photo ? (
         <Grid
-          size={{ xs: 12, sm: 3, md: 2 }}
+          size={{ xs: 12, sm: 6, md: 4 }}
           display="flex"
           justifyContent="center"
           alignItems="center"
