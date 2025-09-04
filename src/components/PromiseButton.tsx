@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import CancelIcon from '@mui/icons-material/Cancel'
 import DoneIcon from '@mui/icons-material/Done'
+import { styled } from '@mui/material'
 import IconButton, { IconButtonProps } from '@mui/material/IconButton'
 
 enum State {
@@ -14,18 +15,26 @@ export type PromiseButtonProps = IconButtonProps & {
   title: string
 }
 
-const PromiseButton: FC<PromiseButtonProps> = (props) => {
+const Button = styled(IconButton)(({ theme }) => ({
+  color: theme.palette.primary.contrastText,
+}))
+
+const PromiseButton: FC<PromiseButtonProps> = ({
+  getPromise,
+  title: initialTitle,
+  children,
+  ...props
+}) => {
   const [state, setState] = useState<State>(State.Ready)
-  const [title, setTitle] = useState<string>(props.title)
+  const [title, setTitle] = useState<string>(initialTitle)
 
   const reset = () => {
     setState(State.Ready)
-    setTitle(props.title)
+    setTitle(initialTitle)
   }
 
   const share = () => {
-    props
-      .getPromise()
+    getPromise()
       .then(() => setState(State.Success))
       .catch(() => setState(State.Fail))
   }
@@ -44,15 +53,15 @@ const PromiseButton: FC<PromiseButtonProps> = (props) => {
   }, [state])
 
   return (
-    <IconButton aria-label={title} title={title} onClick={share}>
+    <Button {...props} aria-label={title} title={title} onClick={share}>
       {state == State.Ready ? (
-        props.children
+        children
       ) : state == State.Success ? (
         <DoneIcon />
       ) : (
         <CancelIcon />
       )}
-    </IconButton>
+    </Button>
   )
 }
 

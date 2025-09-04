@@ -2,9 +2,8 @@ import type { FC } from 'react'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import DisplayCard from '../components/DisplayCard'
-import type { Skill } from '../types'
 
-const SkillsCard: FC<{ skills?: Skill[] }> = ({ skills }) =>
+const SkillsCard: FC<{ skills?: string[] }> = ({ skills }) =>
   skills ? (
     <DisplayCard>
       <Typography component="h2" variant="h3">
@@ -13,7 +12,7 @@ const SkillsCard: FC<{ skills?: Skill[] }> = ({ skills }) =>
       <Grid container spacing={2}>
         {skills.map((skill, index) => (
           <Grid key={index} size="auto">
-            <Typography>{skill.name}</Typography>
+            <Typography>{skill}</Typography>
           </Grid>
         ))}
       </Grid>

@@ -34,7 +34,7 @@ This is a short paragraph about me.
     },
   ],
   skills: [
-    { name: 'Skill 1', text: 'Description of skill 1' },
-    { name: 'Skill 2', text: 'Description of skill 2' },
+    'Skill 1',
+    'Skill 2',
   ],
 }
