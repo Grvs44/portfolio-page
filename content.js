@@ -1,5 +1,10 @@
 export default {
   color: '#ff00b8',
+  icon: {
+    src: 'img.png',
+    type: 'png',
+    sizes: '240x240',
+  },
   name: 'Grvs44',
   pronouns: 'she/her',
   description: `
@@ -33,8 +38,5 @@ This is a short paragraph about me.
       links: [{ text: 'View on GitHub', url: 'https://github.com/Grvs44' }],
     },
   ],
-  skills: [
-    'Skill 1',
-    'Skill 2',
-  ],
+  skills: ['Skill 1', 'Skill 2'],
 }
