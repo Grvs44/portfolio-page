@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "content": "node ./scripts/writecontent.js",
+    "content": "node --disable-warning=ExperimentalWarning ./scripts/writecontent.js",
     "tsc": "tsc",
     "build": "tsc && vite build"
   },

@@ -20,9 +20,9 @@ export default defineConfig({
         name: env.VITE_NAME,
         icons: [
           {
-            src: 'img.png',
-            type: 'image/png',
-            sizes: '240x240',
+            src: env.VITE_ICON_SRC,
+            type: 'image/' + env.ICON_TYPE,
+            sizes: env.ICON_SIZES,
           },
         ],
         start_url: '.',
