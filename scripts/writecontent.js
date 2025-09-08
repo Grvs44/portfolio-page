@@ -23,6 +23,7 @@ export default async function run() {
   )
 
   const vars = [
+    'VITE_LAST_UPDATED=' + new Date().toLocaleDateString(),
     'VITE_NAME=' + content.name,
     'VITE_VERSION=' + pkg.version,
     'VITE_ICON_SRC=' + icon.src,
