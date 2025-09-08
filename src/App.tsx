@@ -11,7 +11,15 @@ import type { Content } from './types'
 const App: FC<{ content: Content }> = ({ content }) => (
   <Box>
     <TopCard content={content} />
-    <Grid container spacing={2} sx={{ padding: 2 }}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        margin: 'auto',
+        maxWidth: '80em',
+        padding: 2,
+      }}
+    >
       <Grid size={{ xs: 12, sm: 8, md: 6 }}>
         <AboutCard text={content.about} />
       </Grid>
