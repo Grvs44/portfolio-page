@@ -16,6 +16,7 @@ const BottomCard: FC<TopCardProps> = ({ content }) => (
   <StyledCard>
     <Typography>{content.name}</Typography>
     <SocialStack socials={content.socials} />
+    <RepoText>Last updated {import.meta.env.VITE_LAST_UPDATED}</RepoText>
     <RepoText>
       Created with{' '}
       <Link
