@@ -3,7 +3,7 @@ import ShareIcon from '@mui/icons-material/Share'
 import type { IconButtonProps } from '@mui/material/IconButton'
 import PromiseButton from './PromiseButton'
 
-const data: ShareData = { url: location.origin }
+const data: ShareData = { url: location.href }
 
 const ShareButton: FC<IconButtonProps> = (props) =>
   navigator.canShare && navigator.canShare(data) ? (
