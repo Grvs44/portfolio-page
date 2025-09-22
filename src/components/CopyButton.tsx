@@ -6,7 +6,7 @@ import PromiseButton from './PromiseButton'
 const CopyButton: FC<IconButtonProps> = (props) =>
   navigator.clipboard ? (
     <PromiseButton
-      getPromise={() => navigator.clipboard.writeText(location.origin)}
+      getPromise={() => navigator.clipboard.writeText(location.href)}
       title="Copy URL"
       {...props}
     >
