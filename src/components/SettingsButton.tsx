@@ -10,6 +10,9 @@ const SettingsButton: FC = () => {
       aria-label="settings"
       onClick={() => state.setSettingsOpen(true)}
       title="Settings"
+      sx={(theme) => ({
+        color: theme.palette.primary.contrastText,
+      })}
     >
       <SettingsIcon />
     </TopIconButton>

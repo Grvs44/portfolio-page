@@ -6,5 +6,4 @@ export default styled(IconButton)(({ theme }) => ({
   position: 'absolute',
   right: 8,
   top: 8,
-  color: theme.palette.primary.contrastText,
 }))
