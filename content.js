@@ -5,6 +5,7 @@ export default {
     type: 'png',
     sizes: '240x240',
   },
+  locale: 'en-gb',
   name: 'Grvs44',
   pronouns: 'she/her',
   description: `
