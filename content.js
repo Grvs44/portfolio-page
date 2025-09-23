@@ -24,13 +24,14 @@ This is a short paragraph about me.
     {
       name: 'Project 1',
       photo: 'img.png',
+      alt: 'Alt text for project 1 photo',
       text: 'This is my project',
       links: [
         {
           text: 'View on GitHub',
           url: 'https://github.com/Grvs44/portfolio-page',
         },
-        { text: 'View LinkedIn post', url: 'javascript:"Test page"' },
+        { text: 'View LinkedIn post' },
       ],
     },
     {
