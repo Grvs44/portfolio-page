@@ -12,6 +12,7 @@ export type TopContent = {
 
 export type Project = {
   name: string
+  alt?: string
   photo?: string
   text: string
   links?: Link[]

@@ -17,9 +17,10 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => (
           alignItems="center"
         >
           <img
+            alt={project.alt}
             src={project.photo}
             style={{ borderRadius: 8, maxHeight: '100%', maxWidth: '100%' }}
-            title={project.name}
+            title={project.alt}
           />
         </Grid>
       ) : null}

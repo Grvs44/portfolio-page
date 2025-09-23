@@ -9,6 +9,7 @@ export default async function run() {
   if (!('locale' in content)) throw 'locale missing from content'
 
   for (const key of ['name', 'description', 'about']) {
+    // @ts-ignore
     content[key] = content[key].trim()
   }
 
@@ -17,6 +18,11 @@ export default async function run() {
   if (!('src' in icon)) throw 'src missing from icon'
   if (!('type' in icon)) throw 'type missing from icon'
   if (!('sizes' in icon)) throw 'sizes missing from icon'
+
+  for (const project of writeContent.projects) {
+    if (project.photo && !project.alt)
+      throw `Photo for project "${project.name}" is missing alt text`
+  }
 
   const date = new Date().toLocaleDateString(locale, {
     day: 'numeric',
