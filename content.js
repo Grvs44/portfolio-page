@@ -1,7 +1,7 @@
 export default {
   color: '#ff00b8',
   icon: {
-    src: 'img.png',
+    src: 'me.png',
     type: 'png',
     sizes: '240x240',
   },
@@ -15,7 +15,7 @@ Description goes here
   about: `
 This is a short paragraph about me.
 `,
-  photo: 'img.png',
+  photo: 'me.jpeg',
   socials: [
     'https://github.com/Grvs44',
     'https://bsky.app/profile/grvs44.bsky.social',
