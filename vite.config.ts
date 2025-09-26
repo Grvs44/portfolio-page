@@ -15,6 +15,7 @@ export default defineConfig({
     react(),
     jsconfigPaths(),
     VitePWA({
+      includeAssets: ['public/*.jpg', 'public/*.jpeg', 'public/*.png'],
       manifest: {
         short_name: env.VITE_NAME,
         name: env.VITE_NAME,
