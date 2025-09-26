@@ -31,7 +31,7 @@ This is a short paragraph about me.
           text: 'View on GitHub',
           url: 'https://github.com/Grvs44/portfolio-page',
         },
-        { text: 'View LinkedIn post' },
+        { text: 'View LinkedIn post', url:'https://www.linkedin.com/in/grvs44' },
       ],
     },
     {
