@@ -5,6 +5,7 @@ coverage
 build
 dev-dist
 public/licenses.txt
+public/*.jpeg
 public/*.png
 src/content.ts
 
